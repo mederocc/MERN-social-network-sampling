@@ -43,8 +43,8 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  // const fullName = `${user.firstName} ${user.lastName}`;
-  const fullName = `Carlos Medero`;
+  const fullName = `${user.firstName} ${user.lastName}`;
+  // const fullName = `Carlos Medero`;
 
   // we can only add Css properties as component properties to MUI BOX component. Other MUI components won't accept it.
   return (

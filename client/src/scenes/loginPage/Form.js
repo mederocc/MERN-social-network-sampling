@@ -20,17 +20,16 @@ import FlexBetween from "../../components/FlexBetween";
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
   lastName: yup.string().required("required"),
-  email: yup.string().required("required"),
-  password: yup.string().email("invalid email").required("required"),
+  email: yup.string().email("invalid email").required("required"),
+  password: yup.string().required("required"),
   location: yup.string().required("required"),
   occupation: yup.string().required("required"),
   picture: yup.string().required("required"),
 });
 
-//Create yup validation schema for login
 const loginSchema = yup.object().shape({
-  email: yup.string().required("required"),
-  password: yup.string().email("invalid email").required("required"),
+  email: yup.string().email("invalid email").required("required"),
+  password: yup.string().required("required"),
 });
 
 //Set initial values for registration and login
@@ -226,7 +225,7 @@ const Form = () => {
               value={values.password}
               name="password"
               error={Boolean(touched.password) && Boolean(errors.password)}
-              helperText={touched.password && errors.location}
+              helperText={touched.password && errors.password}
               sx={{ gridColumn: "span 4" }}
             />
           </Box>
