@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import authReducer from "./state";
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit"; // eslint-disable-line
 import { Provider } from "react-redux";
 import {
   persistStore,
