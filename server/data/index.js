@@ -14,14 +14,14 @@ const userIds = [
 export const users = [
   {
     _id: userIds[0],
-    firstName: "Tim",
-    lastName: "Tom",
+    firstName: "test",
+    lastName: "me",
     email: "aaaaaaa@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p11.jpeg",
     friends: [],
     location: "San Fran, CA",
-    occupation: "Cook",
+    occupation: "Software Engineer",
     viewedProfile: 14561,
     impressions: 888822,
     createdAt: 1115211422,
@@ -31,7 +31,7 @@ export const users = [
   {
     _id: userIds[1],
     firstName: "Steve",
-    lastName: "Stove",
+    lastName: "Ralph",
     email: "thataaa@gmail.com",
     password: "$!FEAS@!O)_IDJda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p3.jpeg",
@@ -46,8 +46,8 @@ export const users = [
   },
   {
     _id: userIds[2],
-    firstName: "Jim",
-    lastName: "Jokes",
+    firstName: "Some",
+    lastName: "Guy",
     email: "someguy@gmail.com",
     password: "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     picturePath: "p4.jpeg",
@@ -62,8 +62,8 @@ export const users = [
   },
   {
     _id: userIds[3],
-    firstName: "Wick",
-    lastName: "Woke",
+    firstName: "Whatcha",
+    lastName: "Doing",
     email: "whatchadoing@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p6.jpeg",
@@ -79,7 +79,7 @@ export const users = [
   {
     _id: userIds[4],
     firstName: "Jane",
-    lastName: "Jones",
+    lastName: "Doe",
     email: "janedoe@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p5.jpeg",
@@ -95,7 +95,7 @@ export const users = [
   {
     _id: userIds[5],
     firstName: "Harvey",
-    lastName: "Carly",
+    lastName: "Dunn",
     email: "harveydunn@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p7.jpeg",
@@ -110,8 +110,8 @@ export const users = [
   },
   {
     _id: userIds[6],
-    firstName: "Lauren",
-    lastName: "Vawen",
+    firstName: "Carly",
+    lastName: "Vowel",
     email: "carlyvowel@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p8.jpeg",
@@ -126,7 +126,7 @@ export const users = [
   },
   {
     _id: userIds[7],
-    firstName: "Dawn",
+    firstName: "Jessica",
     lastName: "Dunn",
     email: "jessicadunn@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
@@ -146,7 +146,7 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[1],
-    firstName: "Just",
+    firstName: "Steve",
     lastName: "Ralph",
     location: "New York, CA",
     description: "Some really long random description",
@@ -167,8 +167,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[3],
-    firstName: "Tony",
-    lastName: "Bologni",
+    firstName: "Whatcha",
+    lastName: "Doing",
     location: "Korea, CA",
     description:
       "Another really long random description. This one is longer than the previous one.",
