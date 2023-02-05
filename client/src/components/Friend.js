@@ -8,12 +8,12 @@ import UserImage from "./UserImage";
 import { useNavigate } from "react-router-dom";
 
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
-  // console.log(userPicturePath);
   const dispatch = useDispatch();
   const navigate = useNavigate(); // import
   const { _id } = useSelector((state) => state.user);
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
+  console.log(_id, friendId);
 
   const { palette } = useTheme();
   const primaryLight = palette.primary.light;
@@ -25,7 +25,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://notfb-backend-production.up.railway.app/users/${_id}/${friendId}`,
+      `https://notfb-backend-production.up.railway.app/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
@@ -64,18 +64,22 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
           </Typography>
         </Box>
       </FlexBetween>
-      <IconButton
-        onClick={() => patchFriend()}
-        sx={{ backgroundColor: primaryLight, p: "0.6rem" }}
-      >
-        {isFriend ? (
-          <PersonRemoveOutlined
-            sx={{ color: primaryDark }}
-          ></PersonRemoveOutlined>
-        ) : (
-          <PersonAddOutlined sx={{ color: primaryDark }}></PersonAddOutlined>
-        )}
-      </IconButton>
+      {_id !== friendId ? (
+        <IconButton
+          onClick={() => patchFriend()}
+          sx={{ backgroundColor: primaryLight, p: "0.6rem" }}
+        >
+          {isFriend ? (
+            <PersonRemoveOutlined
+              sx={{ color: primaryDark }}
+            ></PersonRemoveOutlined>
+          ) : (
+            <PersonAddOutlined sx={{ color: primaryDark }}></PersonAddOutlined>
+          )}
+        </IconButton>
+      ) : (
+        ""
+      )}
     </FlexBetween>
   );
 };

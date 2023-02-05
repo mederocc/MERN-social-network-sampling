@@ -11,6 +11,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   // console.log(posts);
   // console.log(posts);
 
+  console.log(userId);
   const getPosts = async () => {
     const response = await fetch(
       "https://notfb-backend-production.up.railway.app/posts",

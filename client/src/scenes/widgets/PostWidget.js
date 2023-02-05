@@ -34,7 +34,6 @@ const PostWidget = ({
 
   // likes={"userId1RandomString":true,"userId2RandomString":true,}
   // according to our definition of likes in the model. if a user has liked the post, their Id will be in the object set as true, otherwise it won't be in it.
-
   const { palette } = useTheme();
   const main = palette.neutral.main;
   const primary = palette.primary.main;
@@ -58,6 +57,7 @@ const PostWidget = ({
   return (
     <WidgetWrapper m="2rem 0">
       <Friend
+        loggedInUserId={loggedInUserId}
         friendId={postUserId}
         name={name}
         subtitle={location}

@@ -58,8 +58,11 @@ const Form = () => {
     // this allows us to send form info with an image
     const formData = new FormData();
     for (let value in values) {
+      if (value === "email") values[value] = values[value].toLowerCase();
+      console.log(value, values[value]);
       formData.append(value, values[value]);
     }
+
     formData.append("picturePath", values.picture.name);
     const savedUserResponse = await fetch(
       "https://notfb-backend-production.up.railway.app/auth/register",
